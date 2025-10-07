@@ -4,40 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Моя первая лаба</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-image: url('image.jpg'); 
-            background-size: cover; 
-            background-position: absolute; 
-            color: #fcfcfb;
-        }
-
-        .container {
-            max-width: 600px;
-            margin: 100px auto; 
-            background-color: rgba(0, 0, 0, 0.5); 
-            padding: 20px;
-            border-radius: 8px;
-            text-align: center; 
-        }
-
-        h1 {
-            font-size: 2.5em;
-        }
-
-        p {
-            font-size: 1.5em;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <h1>Я - Никита Муравский</h1>
         <p>Это моя первая лаба,</p>
         <p>жду продолжения!</p>
+
+        <a href="https://vk.com/audios533759759?section=all" class="button-link" target="_blank">
+            <button class="animated-button" onclick="animateButton(this)">
+                Моя музыка VK
+            </button>
+        </a>
     </div>
+
+    <script>
+        
+        
+        function redirectToVK(button) {
+            animateButton(button);
+            setTimeout(() => {
+                window.open('https://vk.com/audios533759759?section=all', '_blank');
+            }, 300);
+        }
+        
+    </script>
 </body>
 </html>

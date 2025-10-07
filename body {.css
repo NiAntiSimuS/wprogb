@@ -2,25 +2,95 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('nature-programming-collage.jpg'); /* Укажите путь к вашему изображению */
-    background-size: cover; /* Заполнение фона */
-    background-position: center; /* Центрирование фона */
-    color: #fff; /* Цвет текста */
+    background-image: url('image.jpg'); 
+    background-size: cover; 
+    background-position: absolute;
+    background-attachment: fixed;
+    color: #fcfcfb;
+    min-height: 100vh;
 }
 
 .container {
     max-width: 600px;
-    margin: 100px auto; /* Центрирование контейнера */
-    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон для читаемости текста */
+    margin: 100px auto;
+    background-color: rgba(0, 0, 0, 0.5); 
     padding: 20px;
     border-radius: 8px;
-    text-align: center; /* Центрирование текста */
+    text-align: center;
+    box-sizing: border-box;
 }
 
 h1 {
     font-size: 2.5em;
+    margin: 0 0 20px 0;
 }
 
 p {
     font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.animated-button {
+    display: inline-block;
+    padding: 15px 30px;
+    margin-top: 20px;
+    background: linear-gradient(45deg, #4a76a8, #5b88bd);
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(74, 118, 168, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.animated-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(74, 118, 168, 0.5);
+    background: linear-gradient(45deg, #3d638f, #4a76a8);
+}
+
+.animated-button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(74, 118, 168, 0.4);
+}
+
+.animated-button:hover::before {
+    left: 100%;
+}
+
+
+.animated-button {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.animated-button.clicked {
+    animation: bounce 0.6s;
+}
+
+.button-link {
+    display: inline-block;
+    text-decoration: none;
+}
+
+@media (max-width: 480px) {
+    .container {
+        margin: 30px 15px;
+        padding: 25px 15px;
+        border-radius: 6px;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+        margin: 0 0 15px 0;
+    }
+    
+    p {
+        font-size: 1.1em;
+        margin: 8px 0;
+    }
 }
